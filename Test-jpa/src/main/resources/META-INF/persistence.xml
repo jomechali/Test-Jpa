@@ -1,13 +1,38 @@
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
-<persistence-unit name="pu_essai" transaction-type="RESOURCE_LOCAL">
-<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<properties>
-<property name="javax.persistence.jdbc.url" value="jdbc:mysql://bowoy3urjj15mtsyzyh9-mysql.services.clever-cloud.com:3306/bowoy3urjj15mtsyzyh9" />
-<property name="javax.persistence.jdbc.user" value="uell4hjbrzkwqybi" />
-<property name="javax.persistence.jdbc.password" value="XK05t1a6WGXVuIf5su0G" />
-<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" ></property>
-<property name="hibernate.show_sql" value="true" /> <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-</properties>
-</persistence-unit> </persistence>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
+	<persistence-unit name="pu_essai" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://bowoy3urjj15mtsyzyh9-mysql.services.clever-cloud.com:3306/bowoy3urjj15mtsyzyh9" />
+			<property name="javax.persistence.jdbc.user" value="uell4hjbrzkwqybi" />
+			<property name="javax.persistence.jdbc.password" value="XK05t1a6WGXVuIf5su0G" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"></property>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="banque_db" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- Entites de la table-->
+		<class>fr.diginamic.Test_jpa_banque.bo.Banque</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.Client</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.Compte</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.Operation</class>
+		<properties>
+			<!-- desactiver l'autodetection des classes de type @Entity -->
+			<property name="hibernate.archive.autodetection" value="" />
+			<!-- Activation de la génération des tables manquantes uniquement -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!-- Drop and create à chaque redémarrage -->
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+			<!-- Affichage des requêtes SQL -->
+			<property name="hibernate.show_sql" value="true" />
+
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://b6qaiqfienw5myoqtvkx-mysql.services.clever-cloud.com:3306/b6qaiqfienw5myoqtvkx" />
+			<property name="javax.persistence.jdbc.user" value="ueqwnacjylauixrq" />
+			<property name="javax.persistence.jdbc.password" value="sFT3LRHWnGrccLcpc7zV" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"></property>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+		</properties>
+	</persistence-unit>
+</persistence>
