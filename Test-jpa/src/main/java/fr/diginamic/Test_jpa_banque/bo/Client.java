@@ -39,8 +39,7 @@ public class Client implements Serializable {
 	private LocalDate dateNaissance;
 
 	@ManyToOne
-	@JoinColumn(name = "ID_BANQUE")
-	@Column(nullable = false)
+	@JoinColumn(name = "ID_BANQUE", nullable = false)
 	private Banque banque;
 
 	@ManyToMany

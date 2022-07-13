@@ -32,8 +32,12 @@ public class Virement extends Operation {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Virement [beneficiaire=");
 		builder.append(beneficiaire);
+		builder.append(", toString()=");
+		builder.append(super.toString());
 		builder.append("]");
 		return builder.toString();
 	}
+
+	
 
 }
