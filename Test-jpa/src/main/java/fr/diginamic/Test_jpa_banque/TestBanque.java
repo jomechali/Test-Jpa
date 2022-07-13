@@ -84,7 +84,6 @@ public class TestBanque {
 		entityManager.persist(compte3);
 		entityManager.persist(operation);
 		entityManager.persist(virement);
-		entityManager.persist(virement);
 		entityManager.getTransaction().commit();
 		/*entityManager.getTransaction().begin();
 		entityManager.getTransaction().commit();*/

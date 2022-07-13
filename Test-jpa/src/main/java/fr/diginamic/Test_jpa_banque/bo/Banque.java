@@ -5,8 +5,6 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -20,11 +18,12 @@ import javax.persistence.Table;
 @Table(name = "banque")
 public class Banque implements Serializable {
 
-	@Id
+	/*@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
-	private int id;
+	private int id;*/
 	
+	@Id
 	@Column(name = "NOM", nullable = false)
 	private String nom;
 	
@@ -33,22 +32,6 @@ public class Banque implements Serializable {
 	
 	public Banque() {
 		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * Getter
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * Setter
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	/**
@@ -86,12 +69,12 @@ public class Banque implements Serializable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Banque [id=");
-		builder.append(id);
-		builder.append(", nom=");
+		builder.append("Banque [nom=");
 		builder.append(nom);
 		builder.append("]");
 		return builder.toString();
 	}
+	
+	
 
 }
