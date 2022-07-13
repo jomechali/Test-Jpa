@@ -40,6 +40,7 @@ public class Client implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "ID_BANQUE")
+	@Column(nullable = false)
 	private Banque banque;
 
 	@ManyToMany

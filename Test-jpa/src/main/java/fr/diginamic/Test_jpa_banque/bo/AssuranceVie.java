@@ -60,8 +60,12 @@ public class AssuranceVie extends Compte {
 		builder.append(dateFin);
 		builder.append(", taux=");
 		builder.append(taux);
+		builder.append(", toString()=");
+		builder.append(super.toString());
 		builder.append("]");
 		return builder.toString();
 	}
+
+	
 
 }

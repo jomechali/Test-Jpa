@@ -58,8 +58,9 @@ public class TestBanque {
 		
 		Banque banque = new Banque();
 		banque.setNom("banque1");
-		banque.setClients(Stream.of(client1).collect(Collectors.toSet()));
+		banque.setClients(Stream.of(client1, client2).collect(Collectors.toSet()));
 		client1.setBanque(banque);
+		client2.setBanque(banque);
 
 		Operation operation = new Operation();
 		operation.setDate(LocalDateTime.now());

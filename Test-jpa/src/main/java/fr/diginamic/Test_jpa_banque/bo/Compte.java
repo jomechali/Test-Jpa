@@ -33,7 +33,7 @@ public class Compte implements Serializable{
 	private double solde;
 	
 	@ManyToMany(mappedBy = "comptes")
-	private Set<Client> propietaires;
+	private Set<Client> proprietaires;
 	
 	@OneToMany(mappedBy = "compte")
 	private Set<Operation> operations;
@@ -80,7 +80,7 @@ public class Compte implements Serializable{
 	 * @return the propietaires
 	 */
 	public Set<Client> getPropietaires() {
-		return propietaires;
+		return proprietaires;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class Compte implements Serializable{
 	 * @param propietaires the propietaires to set
 	 */
 	public void setPropietaires(Set<Client> propietaires) {
-		this.propietaires = propietaires;
+		this.proprietaires = propietaires;
 	}
 
 	/**
