@@ -29,7 +29,10 @@ public class Operation implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+
+	@Column(nullable = false)
 	private LocalDateTime date;
+	
 	private double montant;
 	private String motif;
 	

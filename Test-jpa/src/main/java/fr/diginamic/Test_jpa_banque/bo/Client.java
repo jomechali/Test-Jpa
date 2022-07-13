@@ -1,5 +1,6 @@
 package fr.diginamic.Test_jpa_banque.bo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -10,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -24,15 +24,18 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "client")
-public class Client {
+public class Client implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
 	private int id;
 
+	@Column(nullable = false)
 	private String nom;
+	@Column(nullable = false)
 	private String prenom;
+	
 	private LocalDate dateNaissance;
 
 	@ManyToOne

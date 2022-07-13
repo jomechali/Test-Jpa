@@ -25,7 +25,7 @@ public class Banque implements Serializable {
 	@Column(name = "ID")
 	private int id;
 	
-	@Column(name = "NOM")
+	@Column(name = "NOM", nullable = false)
 	private String nom;
 	
 	@OneToMany(mappedBy = "banque")

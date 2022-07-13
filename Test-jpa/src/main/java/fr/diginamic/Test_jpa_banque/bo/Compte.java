@@ -42,21 +42,6 @@ public class Compte implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * Getter
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * Setter
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	/**
 	 * Getter
@@ -122,17 +107,34 @@ public class Compte implements Serializable{
 		this.operations = operations;
 	}
 
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Compte [id=");
-		builder.append(id);
-		builder.append(", numero=");
+		builder.append("Compte [numero=");
 		builder.append(numero);
 		builder.append(", solde=");
 		builder.append(solde);
 		builder.append("]");
 		return builder.toString();
+	}
+
+
+	/**
+	 * Getter
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+
+	/**
+	 * Setter
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
