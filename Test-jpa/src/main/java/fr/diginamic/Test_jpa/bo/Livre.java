@@ -1,10 +1,12 @@
 package fr.diginamic.Test_jpa.bo;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +21,9 @@ public class Livre implements Serializable {
 	
 	@Column(name = "AUTEUR", length = 50, nullable = false)
 	private String auteur;
+	
+	@ManyToMany(mappedBy = "livres")
+	private Set<Emprunt> emprunts;
 	
 	public Livre() {
 		// TODO Auto-generated constructor stub
