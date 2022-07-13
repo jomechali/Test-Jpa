@@ -17,13 +17,16 @@
 		<class>fr.diginamic.Test_jpa_banque.bo.Client</class>
 		<class>fr.diginamic.Test_jpa_banque.bo.Compte</class>
 		<class>fr.diginamic.Test_jpa_banque.bo.Operation</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.AssuranceVie</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.LivretA</class>
+		<class>fr.diginamic.Test_jpa_banque.bo.Virement</class>
 		<properties>
 			<!-- desactiver l'autodetection des classes de type @Entity -->
 			<property name="hibernate.archive.autodetection" value="" />
 			<!-- Activation de la génération des tables manquantes uniquement -->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<!-- Drop and create à chaque redémarrage -->
-			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+			<!-- <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>  -->
 			<!-- Affichage des requêtes SQL -->
 			<property name="hibernate.show_sql" value="true" />
 
